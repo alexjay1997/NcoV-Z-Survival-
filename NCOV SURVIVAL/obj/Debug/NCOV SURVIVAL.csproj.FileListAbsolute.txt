@@ -1,0 +1,16 @@
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.exe.config
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.exe
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.pdb
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form1.resources
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Properties.Resources.resources
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csproj.GenerateResource.cache
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.exe
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.pdb
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form2.resources
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form3.resources
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form_options.resources
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\Interop.WMPLib.dll
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csproj.ResolveComReference.cache
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\Interop.WMPLib.dll
+C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\AxInterop.WMPLib.dll
