@@ -41,6 +41,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label_gameOver = new System.Windows.Forms.Label();
             this.playAgain = new System.Windows.Forms.Button();
+            this.texthealth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -58,6 +59,7 @@
             this.labelAmmo.Size = new System.Drawing.Size(97, 34);
             this.labelAmmo.TabIndex = 0;
             this.labelAmmo.Text = "Ammo: 0";
+            this.labelAmmo.Click += new System.EventHandler(this.labelAmmo_Click);
             // 
             // labelKills
             // 
@@ -85,10 +87,12 @@
             // 
             // progressBar2
             // 
+            this.progressBar2.BackColor = System.Drawing.Color.Yellow;
             this.progressBar2.Location = new System.Drawing.Point(547, 14);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(192, 23);
             this.progressBar2.TabIndex = 3;
+            this.progressBar2.Click += new System.EventHandler(this.progressBar2_Click);
             // 
             // pictureBox2
             // 
@@ -96,7 +100,7 @@
             this.pictureBox2.Image = global::NCOV_SURVIVAL.Properties.Resources.zdown;
             this.pictureBox2.Location = new System.Drawing.Point(91, 112);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 71);
+            this.pictureBox2.Size = new System.Drawing.Size(70, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -108,7 +112,7 @@
             this.pictureBox3.Image = global::NCOV_SURVIVAL.Properties.Resources.zdown;
             this.pictureBox3.Location = new System.Drawing.Point(496, 82);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(71, 71);
+            this.pictureBox3.Size = new System.Drawing.Size(70, 126);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -120,7 +124,7 @@
             this.pictureBox4.Image = global::NCOV_SURVIVAL.Properties.Resources.zup;
             this.pictureBox4.Location = new System.Drawing.Point(342, 447);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(71, 71);
+            this.pictureBox4.Size = new System.Drawing.Size(70, 126);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -141,7 +145,6 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.gameEngine);
             // 
             // label_gameOver
@@ -174,11 +177,23 @@
             this.playAgain.Visible = false;
             this.playAgain.Click += new System.EventHandler(this.playAgain_Click);
             // 
+            // texthealth
+            // 
+            this.texthealth.AutoSize = true;
+            this.texthealth.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.texthealth.Location = new System.Drawing.Point(743, 18);
+            this.texthealth.Name = "texthealth";
+            this.texthealth.Size = new System.Drawing.Size(36, 13);
+            this.texthealth.TabIndex = 10;
+            this.texthealth.Text = "health";
+            this.texthealth.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // Form3
             // 
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(791, 523);
+            this.Controls.Add(this.texthealth);
             this.Controls.Add(this.playAgain);
             this.Controls.Add(this.label_gameOver);
             this.Controls.Add(this.player);
@@ -221,5 +236,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label_gameOver;
         private System.Windows.Forms.Button playAgain;
+        private System.Windows.Forms.Label texthealth;
     }
 }

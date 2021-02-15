@@ -14,3 +14,20 @@ C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\AxInterop.WMPLib.
 C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csproj.ResolveComReference.cache
 C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\Interop.WMPLib.dll
 C:\Users\Fauni\Documents\NCOV SURVIVAL\NCOV SURVIVAL\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.exe.config
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\Interop.WMPLib.dll
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csproj.ResolveComReference.cache
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.exe
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.pdb
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.exe
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\bin\Debug\NCOV SURVIVAL.pdb
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\bin\Debug\Interop.WMPLib.dll
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csprojResolveAssemblyReference.cache
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form1.resources
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form2.resources
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form3.resources
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Form_options.resources
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV_SURVIVAL.Properties.Resources.resources
+C:\Users\al\Desktop\NCOV Z SURVIVAL\NcoV-Z-Survival-\NCOV SURVIVAL\obj\Debug\NCOV SURVIVAL.csproj.GenerateResource.Cache

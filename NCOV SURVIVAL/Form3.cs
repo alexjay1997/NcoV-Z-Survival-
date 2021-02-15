@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +14,13 @@ namespace NCOV_SURVIVAL
 {
     public partial class Form3 : Form
     {
+        
+
 
         WindowsMediaPlayer playerSound = new WindowsMediaPlayer();
         public Form3()
         {
+            Application.EnableVisualStyles();
             InitializeComponent();
             playerSound.URL = "gone-apocalypse.mp3";
         }
@@ -24,6 +29,57 @@ namespace NCOV_SURVIVAL
         {
             playerSound.controls.play();
         }
+
+
+        // ------------ start variables -------
+
+        bool goUp; //player go up
+        bool goDown; //player go up
+        bool goLeft; //player go up
+        bool goRight; //player go up
+
+        string facing = "up"; //used to guide the bullets
+
+        int playerHealth = 100;
+
+        int speed = 20;
+        int ammo = 20;
+        int zombieSpeed = 5;
+
+        int score = 0;
+
+        bool gameOver = false;
+        Random rnd = new Random();
+
+        private void Form3_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            texthealth.Text = "health";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playAgain_Click(object sender, EventArgs e)
+        {
+
+            Form1 f1 = new Form1();
+            this.Hide();
+
+            f1.ShowDialog();
+
+            this.Close();
+        }
+
+        // end variables
+
+
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
@@ -94,11 +150,14 @@ namespace NCOV_SURVIVAL
 
             }
 
-            if (ammo < 1)
+            if (ammo == 5 || ammo ==8)
             {
                 DropAmmo();
 
             }
+
+            
+
 
         }
 
@@ -111,6 +170,9 @@ namespace NCOV_SURVIVAL
                 progressBar2.Value = Convert.ToInt32(playerHealth);
 
             }
+
+            
+
             else
             {
                 player.Image = Properties.Resources.dead;
@@ -125,12 +187,10 @@ namespace NCOV_SURVIVAL
 
             labelAmmo.Text = "Ammo:" + ammo;
             labelKills.Text = "Kills: " + score;
+            texthealth.Text = Convert.ToString(playerHealth);//text or health label here!!
 
-            if (playerHealth < 20)
-            {
-                progressBar2.ForeColor = System.Drawing.Color.Red;
 
-            }
+            
 
             if (goLeft && player.Left > 0)
 
@@ -162,6 +222,37 @@ namespace NCOV_SURVIVAL
 
             foreach (Control x in this.Controls)
             {
+
+
+                if (x is PictureBox && x.Tag == "medikit")
+
+                {
+
+
+
+                    if (((PictureBox)x).Bounds.IntersectsWith(player.Bounds))
+                    {
+                        this.Controls.Remove(((PictureBox)x));
+
+                        ((PictureBox)x).Dispose();
+                        playerHealth += 30;
+
+                        if (playerHealth > 100) {
+                         //   this.Controls.Remove(((PictureBox)x));
+                            playerHealth = 100;
+                            ((PictureBox)x).Dispose();
+
+
+
+                        }
+
+                        
+                    }
+
+
+
+                }
+
                 if (x is PictureBox && x.Tag == "ammo")
 
                 {
@@ -173,38 +264,44 @@ namespace NCOV_SURVIVAL
                         ((PictureBox)x).Dispose();
                         ammo += 7;
 
-                    
+
                     }
-                            
+
                 }
 
                 if (x is PictureBox && x.Tag == "bullet")
                 {
 
 
-                    if (((PictureBox)x).Left < 1 || ((PictureBox)x).Left > 930 || ((PictureBox)x).Top < 10 || ((PictureBox)x).Top >700)
-                    
-                        {
+                    if (((PictureBox)x).Left < 1 || ((PictureBox)x).Left > 930 || ((PictureBox)x).Top < 10 || ((PictureBox)x).Top > 700)
+
+                    {
                         this.Controls.Remove(((PictureBox)x));
                         ((PictureBox)x).Dispose();
-                        }
+                    }
 
-                
+
                 }
 
-                    if(x is PictureBox && x.Tag == "zombie")
+                if (x is PictureBox && x.Tag == "zombie")
+                {
+                    if (((PictureBox)x).Bounds.IntersectsWith(player.Bounds))
                     {
-                        if (((PictureBox)x).Bounds.IntersectsWith(player.Bounds))
-                        {
                         playerHealth -= 1; // if zombie hits the player then minus the health by 1
-                        }
+                    }
+
+                    if (playerHealth == 70)
+                    {
+                        DropMedikit();
+
+                    }
 
                     // move zombie towards  the player picturebox
 
                     if (((PictureBox)x).Left > player.Left)
                     {
                         ((PictureBox)x).Left -= zombieSpeed;
-                        ((PictureBox)x).Image =Properties.Resources.zleft;
+                        ((PictureBox)x).Image = Properties.Resources.zleft;
                     }
 
                     if (((PictureBox)x).Top > player.Top)
@@ -226,6 +323,9 @@ namespace NCOV_SURVIVAL
                         ((PictureBox)x).Image = Properties.Resources.zdown;
                     }
 
+                    
+                    
+                    
                 }
 
 
@@ -263,6 +363,21 @@ namespace NCOV_SURVIVAL
             ammo.BringToFront();
             player.BringToFront();
 
+            return;
+
+        }
+        private void DropMedikit()
+        {
+            PictureBox medikit = new PictureBox();
+            medikit.Image = Properties.Resources.medikit;
+            medikit.SizeMode = PictureBoxSizeMode.AutoSize;
+            medikit.Left = rnd.Next(10, 890);
+            medikit.Top = rnd.Next(50, 600);
+            medikit.Tag = "medikit";
+            this.Controls.Add(medikit);
+            medikit.BringToFront();
+            player.BringToFront();
+
         }
 
         private void shoot(string direct)
@@ -297,55 +412,24 @@ namespace NCOV_SURVIVAL
 
         }
 
-
-        // ------------ start variables -------
-
-             bool goUp; //player go up
-             bool goDown; //player go up
-             bool goLeft; //player go up
-             bool goRight; //player go up
-
-        string facing = "up"; //used to guide the bullets
-
-        double playerHealth = 100;
-
-        int speed = 100;
-        int ammo = 20;
-        int zombieSpeed = 15;
-       
-        int score = 0;
-
-        bool gameOver = false;
-        Random rnd = new Random();
-
-        private void Form3_Load_1(object sender, EventArgs e)
+        private void progressBar2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void labelAmmo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void playAgain_Click(object sender, EventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
-       
-            Form1 f1 = new Form1();
-            this.Hide();
 
-            f1.ShowDialog();
-
-            this.Close();
         }
-
-        // end variables
-
-
     }
 }

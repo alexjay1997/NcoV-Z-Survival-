@@ -13,7 +13,7 @@ namespace NCOV_SURVIVAL
     {
         //start variables
         public string direction;
-        public int speed = 30;
+        public int speed = 20;
         PictureBox Bullet = new PictureBox();
         Timer tm = new Timer();
         public int bulletLeft;
